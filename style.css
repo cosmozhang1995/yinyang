@@ -1,0 +1,41 @@
+.container {
+	width: 980px;
+	margin: 0 auto;
+}
+
+@media screen and (max-width: 1023px) {
+	.container { width: 780px; }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+	.container { width: 980px; }
+}
+
+@media screen and (min-width: 1440px) {
+	.container { width: 1280px; }
+}
+
+.main-canvas {
+	width: 500px;
+	height: 500px;
+	margin: 0 auto;
+	display: block;
+	border: 1px #cccccc solid;
+	background-color: #ffffdd;
+}
+
+.save-button {
+	width: 500px;
+	height: 50px;
+	margin: 10px auto;
+	text-align: center;
+	color: white;
+	font-size: 24px;
+	line-height: 50px;
+	border-radius: 6px;
+	background-color: #0099FF;
+	cursor: pointer;
+}
+.save-button:hover {
+	background-color: #00CCFF;
+}
