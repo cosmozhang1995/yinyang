@@ -313,7 +313,9 @@ $(document).ready(function() {
 			yinyangList[i].focused = false;
 		}
 		doRefresh();
-		saveFile(mainCanvas.toDataURL('image/png'), '阴阳图.png');
+		var name = $('#input-name').val();
+		var date = $('#input-date').val();
+		saveFile(mainCanvas.toDataURL('image/png'), '阴阳图_' + name + '_' + date + '.png');
 	});
 	$('#clear-button').click(function() {
 		for (var i = yinyangList.length - 1; i >= 0; i--) {
