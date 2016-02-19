@@ -4,6 +4,16 @@
 	font-family: Arial, "Microsoft YaHei";
 }
 
+.media-screen, .media-print {
+	display: none;
+}
+@media only screen {
+	.media-screen { display: block; }
+}
+@media only print {
+	.media-print {display: block; }
+}
+
 .panel-container {
 	width: 900px;
 	margin: 0 auto;
@@ -97,6 +107,10 @@
 	margin-top: 20px;
 }
 
+.script-page div {
+	margin-bottom: 30px;
+}
+
 @media screen and (max-width: 1023px) {
 	.container { width: 780px; }
 }
@@ -107,4 +121,12 @@
 
 @media screen and (min-width: 1440px) {
 	.container { width: 1280px; }
+}
+
+@media print {
+	.container {
+		width: auto;
+		margin: 50px;
+		font-size: 16px;
+	}
 }

@@ -204,6 +204,19 @@ function refreshInfoRegion(ctx, name, date) {
 	ctx.fillText(date, canvasWidth - infoSentenceWidth, canvasHeight - infoSentenceHeight - (infoSentenceHeight - infoTextSize) / 2, infoSentenceWidth);
 }
 
+function refreshScriptSection(scriptEl, name, date, list) {
+	$('#script-info-name').text(name);
+	$('#script-info-date').text(date);
+	var scriptContentEl = scriptEl.find('#script-content');
+	scriptContentEl.children().remove();
+	var item;
+	for (var i = 0; i < list.length; i++) {
+		item = list[i];
+		$("<p>" + item.textYan + "</p>").appendTo(scriptContentEl);
+		$("<p>" + item.textYin + "</p>").appendTo(scriptContentEl);
+	}
+}
+
 var saveFile = function(data, filename){
     var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
     save_link.href = data;
@@ -233,6 +246,7 @@ $(document).ready(function() {
 	function doRefresh() {
 		refresh(mainCtx, yinyangList);
 		refreshInfoRegion(mainCtx, $('#input-name').val(), $('#input-date').val());
+		refreshScriptSection($('#script-page'), $('#input-name').val(), $('#input-date').val(), yinyangList);
 	}
 
 	$('.input-box').change(function() {

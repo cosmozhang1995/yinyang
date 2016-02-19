@@ -7,34 +7,45 @@
 </head>
 <body>
 	<div class="container">
-		<div class="panel-container">
-			<div class="assistant-panel">
-				<div class="input-group">
-					<span class="input-prop">姓名</span>
-					<input class="input-box" id="input-name"></input>
-				</div>
-				<div class="input-group">
-					<span class="input-prop">日期</span>
-					<input class="input-box" id="input-date"></input>
-				</div>
-				<div class="button" id="clear-button">恢复</div>
-				<div class="current-panel" id="current-panel" style="display: none;">
-					<div class="devider">
-						<span class="devider-text">当前</span>
+		<div class="media-screen">
+			<div class="panel-container">
+				<div class="assistant-panel">
+					<div class="input-group">
+						<span class="input-prop">姓名</span>
+						<input class="input-box" id="input-name"></input>
 					</div>
 					<div class="input-group">
-						<span class="input-prop">阳</span>
-						<input class="input-box" id="input-yang"></input>
+						<span class="input-prop">日期</span>
+						<input class="input-box" id="input-date"></input>
 					</div>
-					<div class="input-group">
-						<span class="input-prop">阴</span>
-						<input class="input-box" id="input-yin"></input>
+					<div class="button" id="clear-button">恢复</div>
+					<div class="current-panel" id="current-panel" style="display: none;">
+						<div class="devider">
+							<span class="devider-text">当前</span>
+						</div>
+						<div class="input-group">
+							<span class="input-prop">阳</span>
+							<input class="input-box" id="input-yang"></input>
+						</div>
+						<div class="input-group">
+							<span class="input-prop">阴</span>
+							<input class="input-box" id="input-yin"></input>
+						</div>
 					</div>
+				</div>
+				<div class="main-panel">
+					<canvas class="main-canvas" id="main-canvas"></canvas>
+					<div href="javascript:;" class="button" id="save-button">保存图片</div>
 				</div>
 			</div>
-			<div class="main-panel">
-				<canvas class="main-canvas" id="main-canvas"></canvas>
-				<div href="javascript:;" class="button" id="save-button">保存图片</div>
+		</div>
+		<div class="media-print" class="script-page" id="script-page">
+			<div class="script-info" id="script-info">
+				<p id="script-info-date" style="float: right;"></p>
+				<p id="script-info-name"></p>
+			</div>
+			<div class="devider"></div>
+			<div class="script-content" id="script-content">
 			</div>
 		</div>
 	</div>
