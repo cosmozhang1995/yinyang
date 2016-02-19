@@ -1,23 +1,30 @@
 .container {
 	width: 980px;
 	margin: 0 auto;
+	font-family: Arial, "Microsoft YaHei";
 }
 
-@media screen and (max-width: 1023px) {
-	.container { width: 780px; }
+.panel-container {
+	width: 900px;
+	margin: 0 auto;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1439px) {
-	.container { width: 980px; }
+.main-panel {
+	width: 600px;
+	margin-left: 0;
+	margin-right: 300px;
 }
 
-@media screen and (min-width: 1440px) {
-	.container { width: 1280px; }
+.assistant-panel {
+	width: 260px;
+	padding: 0px 20px;
+	margin: 0 auto;
+	float: right;
 }
 
 .main-canvas {
-	width: 500px;
-	height: 500px;
+	width: 600px;
+	height: 600px;
 	margin: 0 auto;
 	display: block;
 	border: 1px #cccccc solid;
@@ -25,7 +32,7 @@
 }
 
 .save-button {
-	width: 500px;
+	width: 600px;
 	height: 50px;
 	margin: 10px auto;
 	text-align: center;
@@ -38,4 +45,67 @@
 }
 .save-button:hover {
 	background-color: #00CCFF;
+}
+
+.input-group {
+	height: 30px;
+	padding: 5px 0px;
+}
+.input-prop {
+	width: 50px;
+	line-height: 30px;
+	display: block;
+	float: left;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+.input-box {
+	display: block;
+	border: none;
+	width: 185px;
+	line-height: 30px;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-left: 55px;
+	margin-right: 0px;
+
+	border: 1px solid #cccccc;
+	box-shadow: 0px 0px 6px -2px #cccccc inset;
+	border-radius: 5px;
+}
+
+.devider {
+	border-top: 1px solid #cccccc;
+	margin-top: 15px;
+	text-align: center;
+	font-size: 0px;
+}
+.devider .devider-text {
+	display: inline-block;
+	margin-top: -15px;
+	padding: 3px;
+	height: 24px;
+	font-size: 16px;
+	line-height: 24px;
+	background-color: white;
+}
+
+.current-panel {
+	margin-top: 20px;
+}
+
+@media screen and (max-width: 1023px) {
+	.container { width: 780px; }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+	.container { width: 980px; }
+}
+
+@media screen and (min-width: 1440px) {
+	.container { width: 1280px; }
 }
