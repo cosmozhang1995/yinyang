@@ -31,8 +31,7 @@
 	background-color: #ffffdd;
 }
 
-.save-button {
-	width: 600px;
+.button {
 	height: 50px;
 	margin: 10px auto;
 	text-align: center;
@@ -43,7 +42,7 @@
 	background-color: #0099FF;
 	cursor: pointer;
 }
-.save-button:hover {
+.button:hover {
 	background-color: #00CCFF;
 }
 

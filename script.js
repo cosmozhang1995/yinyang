@@ -315,6 +315,12 @@ $(document).ready(function() {
 		doRefresh();
 		saveFile(mainCanvas.toDataURL('image/png'), '阴阳图.png');
 	});
+	$('#clear-button').click(function() {
+		for (var i = yinyangList.length - 1; i >= 0; i--) {
+			yinyangList[i].rate = 0.5;
+		}
+		doRefresh();
+	});
 
 	var today = new Date();
 	$('#input-date').val(today.getUTCFullYear() + "-" + (today.getUTCMonth() + 1) + "-" + (today.getUTCDate() + 1));
